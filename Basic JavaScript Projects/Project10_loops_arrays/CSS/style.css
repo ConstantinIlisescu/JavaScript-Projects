@@ -1,0 +1,31 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px;
+}
+
+.box {
+  background-color: rgba(145, 76, 76, 0.3);
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.button {
+  background-color: rgba(145, 76, 76, 0.3);
+  border: none;
+  padding: 8px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10%;
+  transition: 300ms;
+}
+
+.button:hover {
+  
+  font-size: 17px;
+  background-color: rgba(145, 76, 76, 0.5);
+  transition: 300ms;
+  cursor: pointer;
+  
+}
