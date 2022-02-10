@@ -12,5 +12,4 @@ function validateForm() {
         alert("Please chose your favourite pet");
         return false;
     }
-    }
-}
+};
