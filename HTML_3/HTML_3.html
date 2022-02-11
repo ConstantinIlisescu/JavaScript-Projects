@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <title>HTML Data attribute</title>
+    </head>
+
+    <body>
+        <script src="./JS/main.js" defer></script>
+
+        <div class="main">
+            <h1>Characters</h1>
+            <h3>Click on any Car make to see a model!</h3>
+
+            <ul>
+                <li onclick="displayType(this)" id="VW" data-car_type="Passat">VW</li>
+                <li onclick="displayType(this)" id="BMW" data-car_type="I8">BMW</li>
+                <li onclick="displayType(this)" id="Audy" data-car_type="A7">Audy</li>
+                <li onclick="displayType(this)" id="Jaguar" data-car_type="XF">Jaguar</li>
+            </ul>
+
+        </div>
+
+    </body>
+
+</html>
