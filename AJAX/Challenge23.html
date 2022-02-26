@@ -22,9 +22,14 @@
         <script>
 
             function callFunction(url, aFunction) {
+                //assigning a new HTTP object request to variable XHTTP 
                 var XHTTP = new XMLHttpRequest();
-                console.log(XHTTP);
+                //console.log(XHTTP);
+
+                //The onreadystatechange property defines a function to be executed when the readyState changes.
                 XHTTP.onreadystatechange = function() {
+
+                    //The status property and the statusText property holds the status of the XMLHttpRequest object.
                     if (this.readyState == 4 && this.status == 200) {
                         //console.log(this.responseText)
                         aFunction(this);
