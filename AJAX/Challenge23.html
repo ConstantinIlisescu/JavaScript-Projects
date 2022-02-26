@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challenge</title>
+    </head>
+
+    <body>
+
+        <div >
+            <h1>Click to add some text.</h1>
+            <button type="button" onclick="callFunction('ajax_info.txt', theFunction)">
+                Click
+            </button>
+            <h1 id="main"> ...</h1>
+
+        </div>
+
+        <script>
+
+            function callFunction(url, aFunction) {
+                var XHTTP = new XMLHttpRequest();
+                console.log(XHTTP);
+                XHTTP.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //console.log(this.responseText)
+                        aFunction(this);
+                    }
+                };
+                XHTTP.open("GET", url, true);
+                XHTTP.send();
+            }
+
+            function theFunction(XHTTP) {
+                document.getElementById("main").innerHTML = XHTTP.responseText;
+                //console.log(XHTTP.responseText)
+            }
+
+        </script>
+
+    </body>
+
+</html>
