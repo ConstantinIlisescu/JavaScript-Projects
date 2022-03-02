@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Challenge25</title>
+    </head>
+
+    <button class="hide">Click me to hide the h3 element</button>
+    <button class="unhide">Click me to unhide the h3 element</button>
+    <h1>Click me (h1)</h1>
+    <h2>Click me (h2)</h2>
+    <h3>Click me (h3)</h3>
+    <p id="1">...</p>
+
+
+
+
+
+    <script>
+        //Event setup using a convenience method
+        $("h1").click(function () {
+            //console.log("you clicked the h1 element")
+            document.getElementById("1").innerText = "You clicked the h1 element";
+        });
+
+        // Equivalent event setup using the `.on()` method
+        $("h2").on("click", function () {
+            document.getElementById("1").innerText = "You clicked the h2 element";
+        });
+
+        $("h3").on("click", function () {
+            document.getElementById("1").innerText = "You clicked the h3 element";
+        });
+
+
+
+        //this efefct hides the element when the button with clas of hide is gets clicked
+        $("button.hide").on("click", function () {
+            $("h3").hide("slow");
+        });
+
+        //this effect unhide the element when the button with clas of unhide is gets clicked
+        $("button.unhide").on("click", function() {
+                $("h3").show("slow");
+            });
+
+
+    </script>
+
+
+    <body>
+
+    </body>
+
+</html>
